@@ -1,4 +1,4 @@
-### Trabajo Práctico - Fundamentos de Spring Boot
+# Trabajo Práctico - Fundamentos de Spring Boot
 
 ## 📝 Descripción del proyecto
 
