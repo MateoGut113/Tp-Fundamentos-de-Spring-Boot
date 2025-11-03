@@ -35,19 +35,19 @@ public class TareaService {
     }
 
     public List<Tarea> obtenerTodasLasTareas() {
-        return tareaRepository.todasLasTareas();
+            return tareaRepository.todasLasTareas();
     }
 
     public List<Tarea> tareasPendientes() {
-        return tareaRepository.todasLasTareas().stream()
-                .filter(t -> !t.isCompletada())
-                .toList();
+            return tareaRepository.todasLasTareas().stream()
+                    .filter(t -> !t.isCompletada())
+                    .toList();
     }
 
     public List<Tarea> tareasCompletadas() {
-        return tareaRepository.todasLasTareas().stream()
-                .filter(Tarea::isCompletada)
-                .toList();
+            return tareaRepository.todasLasTareas().stream()
+                    .filter(Tarea::isCompletada)
+                    .toList();
     }
 
     public Optional<Tarea> marcarTareaCompletada(Long id) {
@@ -57,15 +57,23 @@ public class TareaService {
     }
 
     public void tareasEstadisticas(){
-        int totalTareas = (int) tareaRepository.todasLasTareas().stream().count();
-        System.out.println("Total de tareas: " + totalTareas);
-        int totalTareasCompletadas = (int) this.tareasCompletadas().stream().count();
-        System.out.println("Total de tareas completadas: " + totalTareasCompletadas);
-        int totalTareasPendientes = (int) this.tareasPendientes().stream().count();
-        System.out.println("Total de tareas pendientes: " + totalTareasPendientes);
+        if (mostrarEstadisticas){
+            System.out.println("\nEstadisticas actuales:");
+            int totalTareas = (int) tareaRepository.todasLasTareas().stream().count();
+            System.out.println("Total de tareas: " + totalTareas);
+            int totalTareasCompletadas = (int) this.tareasCompletadas().stream().count();
+            System.out.println("Total de tareas completadas: " + totalTareasCompletadas);
+            int totalTareasPendientes = (int) this.tareasPendientes().stream().count();
+            System.out.println("Total de tareas pendientes: " + totalTareasPendientes);
+        } else {
+            //Hecho asi para que pueda verse el resto del codigo fuente por consola, ideal usar un throw.
+            System.out.println("\n⚠️ Muestreo de estadísticas desactivado por configuración, acceso denegado.");
+            return;
+        }
     }
 
     public void mostrarConfiguracion(){
         System.out.println("Nombre de aplicacion: "+appNombre+", maximo total de tareas permitido: "+maxTareas+", permiso para mostrar estadisticas: "+mostrarEstadisticas);
     }
+
 }

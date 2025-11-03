@@ -38,7 +38,6 @@ public class TareasApplication implements CommandLineRunner {
         tareaService.marcarTareaCompletada(2L);
         System.out.println("\nSe completó la tarea id: 2L");
 
-        System.out.println("\nEstadisticas actuales:");
         tareaService.tareasEstadisticas();
 
         System.out.println("\nTareas completadas:\n " +tareaService.tareasCompletadas());
