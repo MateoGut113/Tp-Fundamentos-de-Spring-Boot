@@ -1,13 +1,13 @@
 # Trabajo Práctico - Fundamentos de Spring Boot
 
 ## 📝 Descripción del proyecto
-Este proyecto es una aplicación de consola desarrollada con **Java y Spring Boot** que permite gestionar tareas con distintos niveles de prioridad.\
-Incluye funcionalidades como agregar tareas, marcar tareas como completadas, filtrar tareas pendientes o completadas, y mostrar estadísticas generales.\
-A su vez, simula una base de datos en memoria para facilitar pruebas y poder ver los cambios ocasionados.\
+Este proyecto es una aplicación de consola desarrollada con **Java y Spring Boot** que permite gestionar tareas clasificadas por niveles de prioridad.\
+Incluye funcionalidades como agregar tareas, marcar tareas como completadas, filtrar tareas pendientes o completadas, y mostrar estadísticas generales del sistema.\
+A su vez, simula una base de datos en memoria para facilitar pruebas y poder visualizar los cambios de manera dinámica sin necesidad de una base de datos real.\
 Está diseñado para funcionar con perfiles configurables (`dev` y `prod`) los cuales decidirán el máximo de tareas permitido a guardar en la base de datos
 y un permiso para mostrar estadísticas generales.
 
-### 📝 Contenido clase Application
+### 📝 Contenido clase `TareasApplication`
 - En el método run(...), implementar el siguiente flujo:
   1. Mostrar mensaje de bienvenida (usando MensajeService)
   2. Mostrar la configuración actual
@@ -20,10 +20,12 @@ y un permiso para mostrar estadísticas generales.
   9. Mostrar mensaje de despedida
 
 ## ⚙️ Tecnologías utilizadas (Java, Spring Boot, Maven)
-- **Java 17**
-- **Spring Boot 3.5.7**
+- **Java. Versión: 17**
+- **Spring Boot. Versión: 3.5.7**
 - **Maven**
 - **Lombok** (Utilizado para simplificar getters/setters)
+
+Se hizo uso de **Spring Initializr** (start.spring.io) para crear el proyecto.
 
 ## 🚀 Instrucciones para clonar y ejecutar el proyecto
 1. Clonar el repositorio:
@@ -74,10 +76,12 @@ spring.profiles.active=prod
 ![Captura de pantalla - PROD 2do.png](capturas/Captura%20de%20pantalla%20-%20PROD%202do.png)
 
 ## 💭 Conclusiones personales sobre lo aprendido
-En lo personal este trabajo práctico me ayudó a afianzar los conceptos de **Spring Boot**, visto en las actividades.
-Aprendí a **configurar perfiles** para cambiar el comportamiento de la aplicación sin tocar el código
-y la simulación de una base de datos en memoria, al igual que en tp anteriores, ayuda a comprender el ciclo de vida de los objetos.\
-También aprendí a gestionar dependencias con **Maven**, ya que este es mi primer trabajo utilizándolo.\
+En lo personal este trabajo práctico me ayudó a:
+- Afianzar los conceptos de **Spring Boot**, visto en las actividades.
+- **Configurar perfiles** para cambiar el comportamiento de la aplicación sin tocar el código.
+- Volver a trabajar con una base de datos en memoria, lo que me ayudó a afianzar mi comprensión sobre el ciclo de vida de los objetos.
+- Aprender a gestionar dependencias con **Maven**, ya que este es mi primer trabajo utilizándolo.
+
 Finalmente lo considero una buena primer experienza para dar un vistazo a como funcionan las aplicaciones reales.
 
 ## 👤 Tu nombre y legajo
