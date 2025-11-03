@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 public class MensajeProdService implements MensajeService{
     @Override
     public void MostrarBienvenida() {
-        System.out.println("Bienvenido, proceso de produccion iniciado.");
+        System.out.println("\nBienvenido, proceso de produccion iniciado.");
     }
 
     @Override
     public void MostrarDespedida() {
-        System.out.println("Proceso de produccion finalizado.");
+        System.out.println("\nProceso de produccion finalizado.");
     }
 }

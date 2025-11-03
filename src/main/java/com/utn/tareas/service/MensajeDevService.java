@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 public class MensajeDevService implements MensajeService{
     @Override
     public void MostrarBienvenida() {
-        System.out.println("Hola y bienvenidos a nuestro programa, iniciamos el proceso de desarrollo.");
+        System.out.println("\nHola y bienvenidos a nuestro programa, iniciamos el proceso de desarrollo.");
     }
 
     @Override
     public void MostrarDespedida() {
-        System.out.println("Nos vemos, que tengan un lindo dia, damos por finalizado el proceso de desarrollo.");
+        System.out.println("\nNos vemos, que tengan un lindo dia, damos por finalizado el proceso de desarrollo.");
     }
 }

@@ -59,9 +59,9 @@ public class TareaService {
     public void tareasEstadisticas(){
         int totalTareas = (int) tareaRepository.todasLasTareas().stream().count();
         System.out.println("Total de tareas: " + totalTareas);
-        int totalTareasPendientes = (int) this.tareasCompletadas().stream().count();
-        System.out.println("Total de tareas completadas: " + totalTareasPendientes);
-        int totalTareasCompletadas = (int) this.tareasPendientes().stream().count();
+        int totalTareasCompletadas = (int) this.tareasCompletadas().stream().count();
+        System.out.println("Total de tareas completadas: " + totalTareasCompletadas);
+        int totalTareasPendientes = (int) this.tareasPendientes().stream().count();
         System.out.println("Total de tareas pendientes: " + totalTareasPendientes);
     }
 
